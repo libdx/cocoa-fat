@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" borderStyle="line" placeholder="Enter your Nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvt-it-27y">
+                                <rect key="frame" x="20" y="40" width="225" height="33"/>
+                                <color key="backgroundColor" red="0.98865906538432291" green="0.99260684242429287" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="0UA-jo-mzR"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="A8w-64-Ffq"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="V50-EG-Uba" customClass="WhiteboardView" customModule="Chalk" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="83" width="375" height="584"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ut7-qA-VPA">
+                                <rect key="frame" x="265" y="38" width="37" height="37"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em8-aQ-l41">
+                                <rect key="frame" x="312" y="42" width="94" height="30"/>
+                                <state key="normal" title="Join">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="TsI-iP-ri0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xvt-it-27y" firstAttribute="centerY" secondItem="ut7-qA-VPA" secondAttribute="centerY" id="12c-cI-HFN"/>
+                            <constraint firstItem="ut7-qA-VPA" firstAttribute="leading" secondItem="Xvt-it-27y" secondAttribute="trailing" constant="20" id="6rG-ii-SMf"/>
+                            <constraint firstAttribute="left" secondItem="Xvt-it-27y" secondAttribute="left" constant="-20" id="9xX-aP-s2Y"/>
+                            <constraint firstItem="Xvt-it-27y" firstAttribute="bottom" secondItem="V50-EG-Uba" secondAttribute="top" constant="-10" id="F7K-bi-X0H"/>
+                            <constraint firstAttribute="width" secondItem="V50-EG-Uba" secondAttribute="width" id="Gg0-jv-BBD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V50-EG-Uba" secondAttribute="bottom" id="PNz-iL-KUq"/>
+                            <constraint firstItem="em8-aQ-l41" firstAttribute="centerY" secondItem="Xvt-it-27y" secondAttribute="centerY" constant="0.5" id="R45-r6-AoN"/>
+                            <constraint firstItem="em8-aQ-l41" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.25" id="VQf-rf-rg0"/>
+                            <constraint firstItem="Xvt-it-27y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="iPw-wf-LuH"/>
+                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="top" secondItem="Xvt-it-27y" secondAttribute="top" constant="-20" id="vqE-kb-kk9"/>
+                            <constraint firstItem="em8-aQ-l41" firstAttribute="leading" secondItem="ut7-qA-VPA" secondAttribute="trailing" constant="10" id="x2a-zl-1Ad"/>
+                            <constraint firstAttribute="centerX" secondItem="V50-EG-Uba" secondAttribute="centerX" id="x7w-bK-f48"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="joinButton" destination="em8-aQ-l41" id="uBZ-AS-4wZ"/>
+                        <outlet property="spinner" destination="ut7-qA-VPA" id="ndM-B6-9Xa"/>
+                        <outlet property="usernameField" destination="Xvt-it-27y" id="npr-Lz-DYr"/>
+                        <outlet property="whiteboardView" destination="V50-EG-Uba" id="RJu-lp-hBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="243"/>
+        </scene>
+    </scenes>
+</document>
